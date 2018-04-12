@@ -1,0 +1,479 @@
+:root {
+    --main-black: #222222;
+    --main-accent: #3498db;
+    --main-accent-hover: #3cb0fd;
+    --light-gray: #eeeeee;
+    --darker-gray: #dddddd;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    src: url("../fonts/Montserrat-Bold.otf") format('truetype');
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: italic;
+    src: url("../fonts/Montserrat-ExtraBoldItalic.otf") format('truetype');
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: unset;
+    src: url("../fonts/Montserrat-Medium.otf") format('truetype');
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: center;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: normal;
+    color: var(--main-black);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+
+body * {
+    user-select: none;
+}
+
+.content * {
+    user-select: text;
+}
+
+body, input {
+    font-family: OpenSans !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+    font-style: normal;
+}
+
+.boldHeader {
+    font-family: Montserrat;
+    font-style: italic;
+}
+
+img {
+    margin: 32px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--light-gray);
+}
+
+#wrapper > div {
+    padding: 32px;
+}
+
+.register {
+    display: block;
+    width: fit-content;
+
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    background: var(--main-accent);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.register:hover {
+    background: var(--main-accent-hover);
+}
+
+#logo {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-image: url('../imgs/Header-Recovered.jpg');
+    background-position: center top;
+    background-size: cover;
+
+    padding: 0 !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+#logo > div {
+    margin: auto;
+}
+
+#logo .boldHeader {
+    display: block;
+    font-size: 10vw;
+    color: white;
+    text-align: center;
+}
+
+#logo .register {
+    font-size: 40px;
+    padding: 16px 24px;
+    margin: auto;
+}
+
+#header {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 56px;
+    padding: 0 !important;
+    background: var(--main-black);
+}
+
+#header > .boldHeader {
+    display: inline;
+    font-size: 40px;
+    color: var(--light-gray);
+    margin-left: 10%;
+}
+
+#header > .register {
+    float: right;
+    margin: 6px;
+    padding: 8px 16px;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+
+
+.content {
+    width: 80%;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+}
+
+.content h3 {
+    padding: 16px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 64px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.content > table,
+.content > table * {
+    border: 1px solid var(--darker-gray);
+    width: 60%;
+}
+
+.content > table {
+    margin: 16px auto;
+}
+
+.content > table > thead {
+    margin: 0 auto;
+}
+
+.content table tr:nth-child(2n-1) {
+    background-color: var(--light-gray);
+}
+
+.content table th {
+    padding: 16px;
+    background-color: var(--main-accent);
+    color: var(--light-gray);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content table td {
+    padding: 8px;
+}
+
+.content table td:nth-child(2) {
+    text-align: right;
+}
+
+#sponsors, .section, #supporters, #footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 2;
+}
+
+#section_header {
+    padding: 32px;
+    margin: 0 -32px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
+.section::after {
+    content: "";
+    width: 100%;
+    background-color: #3498db;
+    height: 2px;
+}
+
+.section {
+    /*margin-top: 32px;*/
+}
+
+.section:nth-child(2n-1) {
+    background-color: #f8f8f8;
+}
+
+.section_problems {
+    width: 100%;
+}
+
+.problem_tab {
+    display: none;
+}
+
+.problem_tab + label {
+    display: inline-block;
+    background-color: var(--light-gray);
+    padding: 8px 16px;
+
+    cursor: pointer;
+
+    font-family: Montserrat;
+    font-style: unset;
+}
+
+.problem_tab + label:hover {
+    background-color: var(--darker-gray);
+}
+
+.problem_tab:checked + label {
+    background-color: var(--main-accent);
+    cursor: default;
+    color: var(--light-gray);
+}
+
+.section_description {
+    margin: 16px 0 32px 0;
+}
+
+.section_prizes {
+    margin: 16px 0 32px 0;
+}
+
+.problem_tab:nth-of-type(1):checked ~ .problem_content:nth-of-type(1),
+.problem_tab:nth-of-type(2):checked ~ .problem_content:nth-of-type(2),
+.problem_tab:nth-of-type(3):checked ~ .problem_content:nth-of-type(3),
+.problem_tab:nth-of-type(4):checked ~ .problem_content:nth-of-type(4),
+.problem_tab:nth-of-type(5):checked ~ .problem_content:nth-of-type(5),
+.problem_tab:nth-of-type(6):checked ~ .problem_content:nth-of-type(6) {
+    display: block;
+}
+
+.problem_content {
+    display: none;
+    border: 2px solid var(--darker-gray);
+    background-color: var(--light-gray);
+    padding: 16px;
+}
+
+.problem_content p:last-child {
+    margin-top: 16px;
+    font-family: Montserrat;
+    font-style: unset;
+}
+
+#footer {
+    background-color: #7b1fa2;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 0!important;
+
+    width: 100%;
+    height: auto;
+
+    align-items: center;
+}
+
+#footer > table {
+    margin-left: 10%;
+    color: var(--light-gray);
+}
+
+
+#footer > table > tbody > tr > td:nth-child(1) {
+    padding-right: 16px;
+}
+
+#footer > table > tbody > tr > td:nth-child(2),
+#footer > table > tbody > tr > td:nth-child(3)/*,
+#footer > table > tbody > tr > td:nth-child(4)*/ {
+    background-image: url("../imgs/Icons.png");
+    background-size: 32px 96px;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    border: 12px solid #7b1fa2;
+}
+
+#footer > table > tbody > tr > td:nth-child(2) {
+    background-position: 0 1px;
+}
+#footer > table > tbody > tr > td:nth-child(3) {
+    background-position: 0 -32px;
+}
+/*#footer > table > tbody > tr > td:nth-child(4) {*/
+    /*background-position: 0 -64px;*/
+/*}*/
+
+#footer > table > tbody > tr > td > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#creators {
+    width: auto;
+    margin: 32px;
+    margin-right: 10%;
+    color: var(--light-gray);
+}
+
+@media (max-width: 992px) {
+
+    #wrapper {
+        display: block;
+    }
+
+    #header > .boldHeader {
+        margin-left: 16px;
+    }
+
+    #header > .register {
+        margin-right: 16px !important;
+    }
+
+    #about,
+    #workshops,
+    #timetable,
+    #sections {
+        margin: 0 16px;
+    }
+
+    .content {
+        width: auto;
+    }
+
+    .content > table {
+        width: 100%;
+    }
+
+    #footer {
+        height: 100%;
+    }
+
+    #footer > table {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #logo .register {
+        font-size: 28px;
+        padding: 8px 12px;
+    }
+
+    #header {
+        height: 40px;
+    }
+
+    #header > .boldHeader {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    #header > .register {
+        margin: 4px;
+        font-size: 18px;
+        padding: 4px 12px;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+
+    .content h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .content img {
+        min-width: 200px;
+        height: auto;
+    }
+
+    .content table {
+        font-size: 16px;
+    }
+}
